@@ -12,5 +12,9 @@ fun Application.configureRouting() {
         get("/") {
             call.respondText("Hello World!")
         }
+        get("/name/{name}") {
+            val name = call.parameters["name"]
+            call.respondText("Hello " + name + "\n")
+        }
     }
 }
