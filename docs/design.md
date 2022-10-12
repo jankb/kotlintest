@@ -1,7 +1,7 @@
 # Design
 
 ```mermaid
-graph TD:
+graph TD;
 a-->b;
 a-->c;
 b-->d;
