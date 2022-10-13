@@ -8,7 +8,7 @@ C4Context
  Boundary(system, "Prøvetaking")
  {
    System(inspApp, "Inspektør App", "Web ting","Lar inspektøren gjøre det som trengs")
-   System(inspApi, "Inspektør API", "Kotlin, Ktor", "Tilbyr et rest api")
+   Component(inspApi, "Inspektør API", "Kotlin, Ktor", "Tilbyr et rest api")
    ContainerDb(database, "Relational DB", "Lagrer alt mulig som vi trenger")
  }
  
