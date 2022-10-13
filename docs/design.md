@@ -15,7 +15,7 @@ C4Context
  title System Context for Prøvetaking
  Person(inspektor, "Inspektør")
  
- System_Boundary(system, "Prævetaking")
+ Boundary(system, "Prøvetaking")
  {
    System(inspApp, "Inspektør App")
  }
