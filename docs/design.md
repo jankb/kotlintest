@@ -14,8 +14,12 @@ c-->d;
 C4Context
  title System Context for Prøvetaking
  Person(inspektor, "Inspektør")
- System(inspApp, "Inspektør App")
  
- BiRel(inspektor, inspApp, "Uses")
+ System_Boundary(system, "Prævetaking")
+ {
+   System(inspApp, "Inspektør App")
+ }
+ 
+ Rel(inspektor, inspApp, "Uses")
 
 ```
