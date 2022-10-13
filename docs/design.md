@@ -1,24 +1,14 @@
 # Design
 
 ```mermaid
-graph TD;
-a-->b;
-a-->c;
-b-->d;
-c-->d;
-
-```
-
-
-```mermaid
 C4Context
  title System Context for Prøvetaking
  Person(inspektor, "Inspektør")
  
  Boundary(system, "Prøvetaking")
  {
-   System(inspApp, "Inspektør App")
-   System(inspApi, "Inspektør API")
+   System(inspApp, "Inspektør App", "Web ting","Lar inspektøren gjøre det som trengs")
+   System(inspApi, "Inspektør API", "Kotlin, Ktor", "Tilbyr et rest api")
    ContainerDb(database, "Relational DB", "Lagrer alt mulig som vi trenger")
  }
  
