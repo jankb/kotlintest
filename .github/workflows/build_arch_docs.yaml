@@ -1,0 +1,23 @@
+name: Build Architectual docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/*.drawio"
+
+jobs:
+  build:
+    name: Build All Arch Docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 0
+      - name: Generate SVGs
+        run: ls 
+                                                                    
+
+
