@@ -34,3 +34,7 @@ build
 
 #Ignore VIM swap files
 *.swp
+
+#Ignore drawio tmp-files
+*.drawio.bkp
+*.drawio.dtmp
