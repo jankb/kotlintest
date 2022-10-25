@@ -25,6 +25,7 @@ services:
     ports:
       - "5050:80"
 
+# U/P admin:geoserver
   geoserver:
     container_name: geoserver_container
     image: docker.osgeo.org/geoserver:2.21.1
@@ -32,6 +33,19 @@ services:
     ports:
       - "8080:8080"
 
+  strapi:
+    container_name: strapi_container
+    image: strapi/strapi
+    restart: always
+    ports:
+      - "1337:1337"
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: prove
+      DATABASE_HOST: pg_container
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: prove
+      DATABASE_PASSWORD: taking
 
 volumes:
   pgdata:
