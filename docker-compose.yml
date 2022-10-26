@@ -33,19 +33,34 @@ services:
     ports:
       - "8080:8080"
 
-  strapi:
-    container_name: strapi_container
-    image: strapi/strapi
+  directus:
+    container_name: directus_container
+    image: directus/directus
     restart: always
     ports:
-      - "1337:1337"
+      - "8055:8055"
     environment:
-      DATABASE_CLIENT: postgres
-      DATABASE_NAME: prove
-      DATABASE_HOST: pg_container
-      DATABASE_PORT: 5432
-      DATABASE_USERNAME: prove
-      DATABASE_PASSWORD: taking
+      DB_CLIENT: postgres
+      DB_HOST: pg_container
+      DB_PORT: 5432
+      DB_DATABASE: prove
+      DB_USER: prove
+      DB_PASSWORD: taking
 
 volumes:
   pgdata:
+
+#  strapi:
+#    container_name: strapi_container
+#    image: strapi/strapi
+#    restart: always
+#    ports:
+#      - "1337:1337"
+#    environment:
+#      DATABASE_CLIENT: postgres
+#      DATABASE_NAME: prove
+#      DATABASE_HOST: pg_container
+#      DATABASE_PORT: 5432
+#      DATABASE_USERNAME: prove
+#      DATABASE_PASSWORD: taking
+
